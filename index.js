@@ -9,7 +9,7 @@ app.get('/', function(req, res){
 });
 
 app.use((req, res, next) => {
-    res.status(404).sendFile('errors/404.html')
+    res.status(404).sendFile('./errors/404.html')
 });
 
 app.listen(PORT)
