@@ -6,6 +6,10 @@ const PORT = process.env.PORT || 80
 
 app.get('/', function(req, res){
     res.sendFile('index.html');
-}); 
+});
+
+router.use((req, res, next) => {
+    res.status(404).sendFile('errors/404.html')
+});
 
 app.listen(PORT)
